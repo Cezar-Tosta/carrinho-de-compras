@@ -1,10 +1,17 @@
 function adicionar(){
     //Recuperar valores: nome do produto, quantidade e valor
-    let nomeProduto = document.getElementById('produto');
+    let produto = document.getElementById('produto').value; // Nome e valor separados por hífen
+    let nomeProduto = produto.split('-')[0]; 
+    let valorUnitario = produto.split('R$')[1];
     let quantidade = document.getElementById('quantidade');
-    alert(nomeProduto.value);
+    
+    alert(nomeProduto);
+    alert(valorUnitario);
     alert(quantidade.value);
+
     //Calcular o preço
+    let preco = quantidade.value * valorUnitario;
+    alert(preco);
     //Adicionar no carrinho
     //Atualizar o valor total
 };
