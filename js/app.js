@@ -1,7 +1,5 @@
-let totalGeral = 0;
-// Zerando os valores iniciais do carrinho e do total
-document.getElementById('lista-produtos').innerHTML = '';
-document.getElementById('valor-total').textContent = `R$ 0`;
+let totalGeral;
+limpar();
 
 function adicionar(){
     //Recuperar valores: nome do produto, quantidade e valor
@@ -24,5 +22,9 @@ function adicionar(){
 };
 
 function limpar(){
-    
+    totalGeral = 0;
+    // Zerando os valores iniciais do carrinho e do total
+    document.getElementById('lista-produtos').innerHTML = '';
+    document.getElementById('valor-total').textContent = `R$ 0`;
+
 };
